@@ -2,7 +2,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
 public class EmpleadoDAO {
     public static void crearEmpleadoDB(Empleado empleado) {
         conexion db_connect = new conexion();
@@ -46,7 +45,7 @@ public class EmpleadoDAO {
                 System.out.println("EMPLEO: "+rs.getString("empleo"));
                 System.out.println("DIRECCION: "+rs.getString("Direccion"));
                 System.out.println("TELEFONO: "+rs.getString("Telefono"));
-                System.out.println("------------------------------");
+                System.out.println("---------------------");
             }
 
         } catch (SQLException e){
