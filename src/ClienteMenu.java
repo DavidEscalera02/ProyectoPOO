@@ -7,7 +7,7 @@ public class ClienteMenu {
 
         do {
             System.out.println("--------------");
-            System.out.println("MENU CLIENTES");
+            System.out.println("------MENU CLIENTES-------");
             System.out.println("1- Crear cliente");
             System.out.println("2- Listar cliente");
             System.out.println("3- Editar cliente");
@@ -31,7 +31,7 @@ public class ClienteMenu {
                     ClienteService.borrarCliente();
                     break;
                 case 5:
-                    System.out.println("Volviendo al menu principal");
+                    System.out.println("Volver al menu principal");
                     break;
                 default:
                     System.out.println("Opcion no valida. Por favor, seleccione una opcion valida.");
