@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="928ac0b4-8022-422f-8aa4-fc88b5e60f72" name="Changes" comment="Terminando empleados">
-      <change afterPath="$PROJECT_DIR$/src/ALmacenMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Almacen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AlmacenDAO.java" afterDir="false" />
+    <list default="true" id="928ac0b4-8022-422f-8aa4-fc88b5e60f72" name="Changes" comment="iniciando Tabla almacen">
+      <change afterPath="$PROJECT_DIR$/src/AlmacenService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ALmacenMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ALmacenMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AlmacenDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AlmacenDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +89,21 @@
       <option name="project" value="LOCAL" />
       <updated>1700674176868</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Terminando cliente">
+      <created>1700679408013</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1700679408013</updated>
+    </task>
+    <task id="LOCAL-00007" summary="iniciando Tabla almacen">
+      <created>1700679437924</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1700679437924</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -110,6 +123,8 @@
     <MESSAGE value="terminado cliente" />
     <MESSAGE value="iniciano empleado" />
     <MESSAGE value="Terminando empleados" />
-    <option name="LAST_COMMIT_MESSAGE" value="Terminando empleados" />
+    <MESSAGE value="Terminando cliente" />
+    <MESSAGE value="iniciando Tabla almacen" />
+    <option name="LAST_COMMIT_MESSAGE" value="iniciando Tabla almacen" />
   </component>
 </project>
