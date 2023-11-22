@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="928ac0b4-8022-422f-8aa4-fc88b5e60f72" name="Changes" comment="terminado cliente">
-      <change afterPath="$PROJECT_DIR$/src/Empleado.java" afterDir="false" />
+    <list default="true" id="928ac0b4-8022-422f-8aa4-fc88b5e60f72" name="Changes" comment="iniciano empleado">
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/EmpleadoDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/EmpleadoMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/EmpleadoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +78,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700666526110</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="iniciano empleado">
+      <created>1700667026560</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1700667026560</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -90,6 +103,7 @@
     <MESSAGE value="inicio de proyecto,conexcion con db" />
     <MESSAGE value="continuando" />
     <MESSAGE value="terminado cliente" />
-    <option name="LAST_COMMIT_MESSAGE" value="terminado cliente" />
+    <MESSAGE value="iniciano empleado" />
+    <option name="LAST_COMMIT_MESSAGE" value="iniciano empleado" />
   </component>
 </project>
