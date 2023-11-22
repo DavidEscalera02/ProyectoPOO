@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="928ac0b4-8022-422f-8aa4-fc88b5e60f72" name="Changes" comment="inicio de proyecto,conexcion con db">
-      <change afterPath="$PROJECT_DIR$/src/Cliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ClienteDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ClienteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/conexion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/conexion.java" afterDir="false" />
+    <list default="true" id="928ac0b4-8022-422f-8aa4-fc88b5e60f72" name="Changes" comment="continuando">
+      <change beforePath="$PROJECT_DIR$/src/ClienteDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClienteDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +58,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700613491727</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="continuando">
+      <created>1700616459045</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1700616459045</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -78,6 +81,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="inicio de proyecto,conexcion con db" />
-    <option name="LAST_COMMIT_MESSAGE" value="inicio de proyecto,conexcion con db" />
+    <MESSAGE value="continuando" />
+    <option name="LAST_COMMIT_MESSAGE" value="continuando" />
   </component>
 </project>

@@ -16,7 +16,8 @@ public class ClienteDAO {
                 ps.setNString(4, cliente.getDireccion());
                 ps.setNString(5, cliente.getTelefono());
                 ps.executeUpdate();
-
+            }catch (SQLException ex){
+                System.out.println(ex);
             }
         }catch (SQLException e){
             System.out.println(e);
