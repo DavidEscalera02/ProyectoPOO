@@ -6,7 +6,7 @@ public class conexion {
     public Connection get_conConnection() {
         Connection conection = null;
         try {
-            conection = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbTienda", "root", "");
+            conection = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbtienda", "root", "");
             if (conection != null) {
                 System.out.println("conexion exitosa....");
 
