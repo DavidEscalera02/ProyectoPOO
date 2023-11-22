@@ -1,5 +1,6 @@
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class ClienteDAO {
@@ -22,15 +23,85 @@ public class ClienteDAO {
         }catch (SQLException e){
             System.out.println(e);
         }
-
     }
     public static void leerClienteDB(){
+        conexion db_conexion = new conexion();
+        PreparedStatement ps=null;
+        ResultSet rs=null;
+        try (Connection conexion = db_conexion.get_conConnection()){
+            String query= "SELECT * FROM cliente";
+            ps = conexion.prepareStatement(query);
+            rs= ps.executeQuery();
+            while (rs.next()){
+                System.out.println("ID: "+rs.getInt("id_cliente"));
+                System.out.println("NOMBRE: "+rs.getString("Nombre"));
+                System.out.println("APELLIDO: "+rs.getString("Apellido"));
+                System.out.println("EMAIL: "+rs.getString("Email"));
+                System.out.println("DIRECCION: "+rs.getString("Direccion"));
+                System.out.println("TELEFONO: "+rs.getString("Telefono"));
+                System.out.println("------------------------------");
+            }
+
+        } catch (SQLException e){
+            System.out.println(e);
+        }
 
     }
     public static void borrarClienteDB(int id_cliente){
+        conexion db_connect = new conexion();
+
+        try (Connection conexion = db_connect.get_conConnection()) {
+            try {
+                String query ="DELETE FROM `dbtienda`.`cliente` WHERE `id` = ?";
+
+                try (PreparedStatement ps = conexion.prepareStatement(query)) {
+                    ps.setInt(1, id_cliente);
+
+                    int filasAfectadas = ps.executeUpdate();
+
+                    if (filasAfectadas > 0) {
+                        System.out.println("Cliente eliminado correctamente.");
+                    } else {
+                        System.out.println("No se encontro el cliente con el id proporcionado.");
+                    }
+                }
+            } catch (SQLException ex) {
+                System.out.println(ex);
+            }
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
 
     }
     public static void actualizarClienteDB(Cliente cliente){
+        conexion db_connect = new conexion();
+
+        try (Connection conexion = db_connect.get_conConnection()) {
+            try {
+                String query = "UPDATE `dbtienda`.`cliente` SET `Nombre` = ?,Apellido' = ?,'Email' = ?,'Direccion' =?,'Telefono' = ? = ? WHERE `id` = ?";
+
+                try (PreparedStatement ps = conexion.prepareStatement(query)) {
+                    ps.setString(1, cliente.getNombre());
+                    ps.setString(2, cliente.getTelefono());
+                    ps.setString(3, cliente.getDireccion());
+                    ps.setString(4, cliente.getEmail());
+                    ps.setInt(5, cliente.getId_cliente());
+
+                    int filasAfectadas = ps.executeUpdate();
+
+                    if (filasAfectadas > 0) {
+                        System.out.println("Cliente se  actualizo correctamente.");
+                    } else {
+                        System.out.println("No se encontro el cliente con el IN igresado.");
+                    }
+                }
+            } catch (SQLException ex) {
+                System.out.println(ex);
+            }
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+    }
 
     }
-}
+
