@@ -11,8 +11,8 @@ public class AlmacenDAO {
                 String B_datos = "INSERT INTO `dbtienda`.`almacen` (`nombre`, `direccion`, `telefono`) VALUES (?,?,?)";
                 try (PreparedStatement ps = conexion.prepareStatement(B_datos)) {
                     ps.setString(1, almacen.getNombre());
-                    ps.setString(1, almacen.getDireccion());
-                    ps.setString(1, almacen.getTelefono());
+                    ps.setString(2, almacen.getDireccion());
+                    ps.setString(3, almacen.getTelefono());
 
                     ps.executeUpdate();
                 }
@@ -74,7 +74,7 @@ public class AlmacenDAO {
 
         try (Connection conexion = db_connect.get_conConnection()) {
             try {
-                String query = "UPDATE `frigobas`.`proveedor` SET `Nombre` = ?, `Direccion` = ?, `CorreoElectronico`= ?, `Telefono` = ? WHERE `id` = ?";
+                String query = "UPDATE `dbtienda`.`almacen` SET `Nombre` = ?, `Direccion` = ?, `CorreoElectronico`= ?, `Telefono` = ? WHERE `id` = ?";
                 try (PreparedStatement ps = conexion.prepareStatement(query)) {
                     ps.setString(1, almacen.getNombre());
                     ps.setString(2, almacen.getDireccion());
