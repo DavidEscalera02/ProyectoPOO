@@ -41,7 +41,7 @@ public class EmpleadoDAO {
                 ps = conexion.prepareStatement(query);
                 rs= ps.executeQuery();
                 while (rs.next()){
-                    System.out.println("ID_CLIENTE: "+rs.getInt("id_cliente"));
+                    System.out.println("ID_EMPLEADO: "+rs.getInt("id_empleado"));
                     System.out.println("NOMBRE: "+rs.getString("Nombre"));
                     System.out.println("APELLIDO: "+rs.getString("Apellido"));
                     System.out.println("EMPLEO: "+rs.getString("empleo"));
