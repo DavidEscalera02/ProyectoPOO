@@ -5,23 +5,15 @@ public class EmpleadoService {
     public static void crearEmpleado(){
     Scanner sc= new Scanner(System.in);
     System.out.println("Ingrese el nuevo nombre del  empleado: ");
-    String nombre;
-    nombre=sc.nextLine();
+    String nombre=sc.nextLine();
     System.out.println("Ingrese el nuevo apellido del  empleado: ");
-    String apellido;
-    apellido=sc.nextLine();
+    String apellido=sc.nextLine();
     System.out.println("Ingrese el nuevo empleo del empleado: ");
-    String empleo;
-    empleo= sc.nextLine();
+    String empleo= sc.nextLine();
     System.out.println("Ingrese Direccion: ");
-    String direccion;
-    direccion= sc.nextLine();
+    String direccion= sc.nextLine();
     System.out.println("Ingrese Telefono: ");
-    String telefono;
-    telefono= sc.nextLine();
-
-
-
+    String telefono= sc.nextLine();
     Empleado empleado = new Empleado();
         empleado.setNombre(nombre);
         empleado.setApellido(apellido);
@@ -66,8 +58,8 @@ public class EmpleadoService {
         actuaEmpleado.setDireccion(direccion);
         actuaEmpleado.setTelefono(telefono);
         actuaEmpleado.setId_empleado(id_emp);
-
         EmpleadoDAO.actualizarEmpleado(actuaEmpleado);
+
     }
 
 }

@@ -8,15 +8,16 @@ public class EmpleadoDAO {
         public static void crearEmpleadoDB(Empleado empleado) {
             conexion db_connect = new conexion();
             try (Connection conexion = db_connect.get_conConnection()) {
+                PreparedStatement ps= null;
                 try {
-                    String query = "INSERT INTO `dbtienda`.`empleados` ('nombre`, `apellido`, `empleo`, `direcion`, `telefono`) VALUES (?,?,?,?,?,?)";
-
-                    try (PreparedStatement ps = conexion.prepareStatement(query)) {
+                    String query = "INSERT INTO empleados (nombre, apellido, empleo, direccion, telefono) VALUES (?,?,?,?,?)";
+                    ps =conexion.prepareStatement(query);
                         ps.setString(1, empleado.getNombre());
                         ps.setString(2, empleado.getApellido());
                         ps.setString(3, empleado.getEmpleo());
                         ps.setString(4, empleado.getDireccion());
                         ps.setString(5, empleado.getTelefono());
+
                         int filasAfectadas = ps.executeUpdate();
 
                         if (filasAfectadas > 0) {
@@ -24,7 +25,6 @@ public class EmpleadoDAO {
                         } else {
                             System.out.println("No se pudo ingresar al empleado.");
                         }
-                    }
                 } catch (SQLException ex) {
                     System.out.println(ex);
                 }
@@ -42,11 +42,11 @@ public class EmpleadoDAO {
                 rs= ps.executeQuery();
                 while (rs.next()){
                     System.out.println("ID_EMPLEADO: "+rs.getInt("id_empleado"));
-                    System.out.println("NOMBRE: "+rs.getString("Nombre"));
-                    System.out.println("APELLIDO: "+rs.getString("Apellido"));
+                    System.out.println("NOMBRE: "+rs.getString("nombre"));
+                    System.out.println("APELLIDO: "+rs.getString("apellido"));
                     System.out.println("EMPLEO: "+rs.getString("empleo"));
-                    System.out.println("DIRECCION: "+rs.getString("Direccion"));
-                    System.out.println("TELEFONO: "+rs.getString("Telefono"));
+                    System.out.println("DIRECCION: "+rs.getString("direccion"));
+                    System.out.println("TELEFONO: "+rs.getString("telefono"));
                     System.out.println("---------------------");
                 }
 
@@ -54,7 +54,7 @@ public class EmpleadoDAO {
                 System.out.println(e);
             }
         }
-        public static void BorrarEmpleadoDB(int nombreEmpleado) {
+        public static void BorrarEmpleadoDB(int nombre_Empleado) {
             conexion db_connect = new conexion();
 
             try (Connection conexion = db_connect.get_conConnection()) {
@@ -62,7 +62,7 @@ public class EmpleadoDAO {
                     String query = "DELETE FROM `dbtienda`.`empleados` WHERE `id` = ?";
 
                     try (PreparedStatement ps = conexion.prepareStatement(query)) {
-                        ps.setInt(1, nombreEmpleado);
+                        ps.setInt(0, nombre_Empleado);
 
                         int filasAfectadas = ps.executeUpdate();
 
@@ -84,13 +84,14 @@ public class EmpleadoDAO {
 
             try (Connection conexion = db_connect.get_conConnection()) {
                 try {
-                    String query = "UPDATE `dbtienda`.`empleados` SET `Nombre` = ?, `Apellido` = ?, `Empleo` = ?, 'Direccion' = ?, `Telefono` = ? WHERE `id` = ?";
+                    String query = "UPDATE `dbtienda`.`empleados` SET `nombre`=?, `apellido`=?, 'empleo'=?, 'direccion'=?,'telefono'=?  WHERE  `id`=?";
                     try (PreparedStatement ps = conexion.prepareStatement(query)) {
                         ps.setString(1, empleado.getNombre());
                         ps.setString(2, empleado.getApellido());
                         ps.setString(3, empleado.getEmpleo());
                         ps.setString(4, empleado.getDireccion());
-                        ps.setString(5, empleado.getTelefono());
+                        ps.setInt(5,empleado.getId_empleado());
+
                         int filasAfectadas = ps.executeUpdate();
 
                         if (filasAfectadas > 0) {

@@ -74,7 +74,7 @@ public class AlmacenDAO {
 
         try (Connection conexion = db_connect.get_conConnection()) {
             try {
-                String query = "UPDATE `dbtienda`.`almacen` SET `Nombre` = ?, `Direccion` = ?, `CorreoElectronico`= ?, `Telefono` = ? WHERE `id` = ?";
+                String query = "UPDATE `dbtienda`.`almacen` SET `nombre`=?, `direccion`=?, `telefono`=? WHERE  `id`=?";
                 try (PreparedStatement ps = conexion.prepareStatement(query)) {
                     ps.setString(1, almacen.getNombre());
                     ps.setString(2, almacen.getDireccion());

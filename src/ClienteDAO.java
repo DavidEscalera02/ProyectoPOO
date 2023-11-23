@@ -33,12 +33,12 @@ public class ClienteDAO {
             ps = conexion.prepareStatement(query);
             rs= ps.executeQuery();
             while (rs.next()){
-                System.out.println("ID: "+rs.getInt("id_cliente"));
-                System.out.println("NOMBRE: "+rs.getString("Nombre"));
-                System.out.println("APELLIDO: "+rs.getString("Apellido"));
-                System.out.println("EMAIL: "+rs.getString("Email"));
-                System.out.println("DIRECCION: "+rs.getString("Direccion"));
-                System.out.println("TELEFONO: "+rs.getString("Telefono"));
+                System.out.println("ID_CLIENTE: "+rs.getInt("id_cliente"));
+                System.out.println("NOMBRE: "+rs.getString("nombre"));
+                System.out.println("APELLIDO: "+rs.getString("apellido"));
+                System.out.println("EMAIL: "+rs.getString("email"));
+                System.out.println("DIRECCION: "+rs.getString("direccion"));
+                System.out.println("TELEFONO: "+rs.getString("telefono"));
                 System.out.println("------------------------------");
             }
 
@@ -55,7 +55,7 @@ public class ClienteDAO {
                 String query ="DELETE FROM `dbtienda`.`cliente` WHERE `id` = ?";
 
                 try (PreparedStatement ps = conexion.prepareStatement(query)) {
-                    ps.setInt(1, id_cliente);
+                    ps.setInt(0, id_cliente);
 
                     int filasAfectadas = ps.executeUpdate();
 
@@ -78,7 +78,7 @@ public class ClienteDAO {
 
         try (Connection conexion = db_connect.get_conConnection()) {
             try {
-                String query = "UPDATE `dbtienda`.`cliente` SET `Nombre` = ?,Apellido' = ?,'Email' = ?,'Direccion' =?,'Telefono' = ? = ? WHERE `id` = ?";
+                String query = "UPDATE `dbtienda`.`cliente` SET `nombre`=?, `apellido`=?, `email`=?, 'direccion'=?, 'telefono'=? WHERE  `id`=?";
 
                 try (PreparedStatement ps = conexion.prepareStatement(query)) {
                     ps.setString(1, cliente.getNombre());

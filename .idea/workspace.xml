@@ -6,6 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="928ac0b4-8022-422f-8aa4-fc88b5e60f72" name="Changes" comment="terminado proyecto">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AlmacenDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AlmacenDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClienteDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClienteDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EmpleadoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EmpleadoDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EmpleadoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EmpleadoService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +137,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700742925289</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="terminado proyecto">
+      <option name="closed" value="true" />
+      <created>1700743990135</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1700743990135</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
