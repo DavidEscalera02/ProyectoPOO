@@ -47,13 +47,13 @@ public class AlmacenDAO {
         }
     }
 
-    public static void eliminarAlmacenDB(int nombreProveedor) {
+    public static void eliminarAlmacenDB(int nombreAlmacen) {
         conexion db_connect = new conexion();
         try (Connection conexion = db_connect.get_conConnection()) {
             try {
                 String query = "DELETE FROM `dbtienda`.`almacen` WHERE `id` = ?";
                 try (PreparedStatement ps = conexion.prepareStatement(query)) {
-                    ps.setInt(1, nombreProveedor);
+                    ps.setInt(1, nombreAlmacen);
                     int filasAfectadas = ps.executeUpdate();
                     if (filasAfectadas > 0) {
                         System.out.println("Almacen eliminado correctamente.");
